@@ -1,27 +1,31 @@
-// declare a string array to hold the input strings 
-// count user input strings
-
 import java.io.*;
 
 public class SortStrings{	
 	public static void main(String [] args) throws IOException
-	{	String[] myStringArray;
-		int countInput = 0;
-		int nextIndex = 0;
+	{	
 		//declare a string array to hold the input strings
+		String[] myStringArray;
+		int size = 0;
+
+		System.out.print("Number of Strings in the array: ");
 		BufferedReader stdin = new BufferedReader(new InputStreamReader(System.in), 1);
 		String s = stdin.readLine();
-		while(s != null){
-			countInput++;
+		size = Integer.parseInt(s);
+
+		myStringArray = new String[size];
+
+		for(int i=0; i<size;i++){
+			BufferedReader is = new BufferedReader(new InputStreamReader(System.in), 1);
+			String inputLine = is.readLine();
+			myStringArray[i] = inputLine;
 		}
-		myStringArray = new String[countInput];
-		if(nextIndex < myStringArray.length)
-		{
-			myStringArray[nextIndex] = s;
-			nextIndex++;
-		}
+
+		//call the bubblesort method to sort the string array alphabetically
 		sortStringBubble(myStringArray);
-		for(int i=0; i<myStringArray.length;i++){
+		System.out.println("The sorted array is: ");
+
+		//print out the sorted array
+		for(int i=0; i<size;i++){
 			System.out.println(myStringArray[i]);
 		}	
 	}
