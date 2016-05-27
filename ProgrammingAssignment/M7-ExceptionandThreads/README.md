@@ -6,3 +6,4 @@ Part 2. Define a class representing an inflatable balloon. Balloon should have a
 
 Part 3. Write a short program that creates two threads, one of which successively sets a variable to the integers from 1 to 10, and another that reads the values, printing each one as it goes. Use synchronized methods, wait( ) and notify( ). Use a separate condition variable to signify that the integer variable is empty. Since the whole point of the exercise is to make sure that every written value is read, without any values being skipped or overwritten, pay special attention to access control. Look at the sample code in Section 7 of this module's commentary for an idea of how to proceed.
 
+
